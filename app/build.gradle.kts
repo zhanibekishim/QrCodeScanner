@@ -33,9 +33,24 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        viewBinding = true
+    }
+}
+
+configurations.all {
+    resolutionStrategy {
+        eachDependency {
+            if (requested.group == "com.android.support") {
+                exclude(group = "com.android.support")
+            }
+        }
+    }
 }
 
 dependencies {
+    implementation("com.journeyapps:zxing-android-embedded:4.3.0")
+    implementation("me.dm7.barcodescanner:zbar:1.8.4")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

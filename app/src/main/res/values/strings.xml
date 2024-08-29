@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Code Scanner(qr,bar etc)</string>
+    <string name="scan_me">Scan</string>
+    <string name="scanner">Scanner</string>
+    <string name="generate">Generate</string>
 </resources>
